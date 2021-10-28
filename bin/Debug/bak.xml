@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleManagementDB>
+  <Drivers>
+    <Driver>
+      <IDDriver>1</IDDriver>
+      <Name>Marko</Name>
+      <Surname>Markic</Surname>
+      <PhoneNumber>+385982828754</PhoneNumber>
+      <DriversLicenseNumber>123456789</DriversLicenseNumber>
+      <Deleted>False</Deleted>
+    </Driver>
+    <Driver>
+      <IDDriver>2</IDDriver>
+      <Name>Toni</Name>
+      <Surname>Tomic</Surname>
+      <PhoneNumber>+38591234560632</PhoneNumber>
+      <DriversLicenseNumber>98876655</DriversLicenseNumber>
+      <Deleted>False</Deleted>
+    </Driver>
+    <Driver>
+      <IDDriver>3</IDDriver>
+      <Name>Marko</Name>
+      <Surname>Markic</Surname>
+      <PhoneNumber>+321321343523</PhoneNumber>
+      <DriversLicenseNumber>2348235683</DriversLicenseNumber>
+      <Deleted>False</Deleted>
+    </Driver>
+  </Drivers>
+  <Vehicles>
+    <Vehicle>
+      <IDVehicle>1</IDVehicle>
+      <Type>Car</Type>
+      <Manufacturer>Opel</Manufacturer>
+      <Year>2001</Year>
+      <Kilometers>142111</Kilometers>
+    </Vehicle>
+    <Vehicle>
+      <IDVehicle>2</IDVehicle>
+      <Type>Truck</Type>
+      <Manufacturer>Volvo</Manufacturer>
+      <Year>2011</Year>
+      <Kilometers>91111</Kilometers>
+    </Vehicle>
+    <Vehicle>
+      <IDVehicle>3</IDVehicle>
+      <Type>Space ship</Type>
+      <Manufacturer>SpaceX</Manufacturer>
+      <Year>2021</Year>
+      <Kilometers>0</Kilometers>
+    </Vehicle>
+    <Vehicle>
+      <IDVehicle>4</IDVehicle>
+      <Type>Car</Type>
+      <Manufacturer>Škoda</Manufacturer>
+      <Year>2101</Year>
+      <Kilometers>1244</Kilometers>
+    </Vehicle>
+    <Vehicle>
+      <IDVehicle>5</IDVehicle>
+      <Type>Truck</Type>
+      <Manufacturer>Man</Manufacturer>
+      <Year>123123</Year>
+      <Kilometers>13123441</Kilometers>
+    </Vehicle>
+    <Vehicle>
+      <IDVehicle>6</IDVehicle>
+      <Type>jef</Type>
+      <Manufacturer>Blue origin</Manufacturer>
+      <Year>2021</Year>
+      <Kilometers>10</Kilometers>
+    </Vehicle>
+    <Vehicle>
+      <IDVehicle>7</IDVehicle>
+      <Type>Car</Type>
+      <Manufacturer>Opel</Manufacturer>
+      <Year>2001</Year>
+      <Kilometers>142111</Kilometers>
+    </Vehicle>
+  </Vehicles>
+  <Routes>
+    <Route>
+      <IDRoute>1</IDRoute>
+      <StartDate>16.9.2021. 14:35:18</StartDate>
+      <EndDate>16.9.2021. 14:35:18</EndDate>
+      <StartLocation>ZZageb</StartLocation>
+      <EndLocation>Berlin</EndLocation>
+      <Distance>0</Distance>
+      <FuelSpent>0</FuelSpent>
+      <FK_TravelWarrents>1</FK_TravelWarrents>
+    </Route>
+    <Route>
+      <IDRoute>2</IDRoute>
+      <StartDate>16.9.2021. 14:35:18</StartDate>
+      <EndDate>16.9.2021. 14:35:18</EndDate>
+      <StartLocation>Berlin</StartLocation>
+      <EndLocation>Zagreb</EndLocation>
+      <Distance>0</Distance>
+      <FuelSpent>0</FuelSpent>
+      <FK_TravelWarrents>2</FK_TravelWarrents>
+    </Route>
+    <Route>
+      <IDRoute>3</IDRoute>
+      <StartDate>16.9.2021. 14:35:18</StartDate>
+      <EndDate>16.9.2021. 14:35:18</EndDate>
+      <StartLocation>Rijeka</StartLocation>
+      <EndLocation>Dubrovnik</EndLocation>
+      <Distance>0</Distance>
+      <FuelSpent>0</FuelSpent>
+      <FK_TravelWarrents>3</FK_TravelWarrents>
+    </Route>
+    <Route>
+      <IDRoute>4</IDRoute>
+      <StartDate>16.9.2021. 14:35:18</StartDate>
+      <EndDate>16.9.2021. 14:35:18</EndDate>
+      <StartLocation>Lhubljana</StartLocation>
+      <EndLocation>Marof</EndLocation>
+      <Distance>0</Distance>
+      <FuelSpent>0</FuelSpent>
+      <FK_TravelWarrents>1</FK_TravelWarrents>
+    </Route>
+    <Route>
+      <IDRoute>5</IDRoute>
+      <StartDate>16.9.2021. 14:35:18</StartDate>
+      <EndDate>16.9.2021. 14:35:18</EndDate>
+      <StartLocation>zagreb</StartLocation>
+      <EndLocation>Karlovac</EndLocation>
+      <Distance>0</Distance>
+      <FuelSpent>0</FuelSpent>
+      <FK_TravelWarrents>1</FK_TravelWarrents>
+    </Route>
+  </Routes>
+  <TravelWarrents>
+    <TravelWarrent>
+      <IDTravelWarrent>1</IDTravelWarrent>
+      <RouteDescription>idem do njemacke po pivo 4 dana 0o</RouteDescription>
+      <DateCreated>16.9.2021. 14:35:18</DateCreated>
+      <FK_Drivers>1</FK_Drivers>
+      <FK_Vehicles>1</FK_Vehicles>
+      <FK_TravelWarrantStates>1</FK_TravelWarrantStates>
+    </TravelWarrent>
+    <TravelWarrent>
+      <IDTravelWarrent>2</IDTravelWarrent>
+      <RouteDescription>prevesti neke vrece za južu  kumarevo</RouteDescription>
+      <DateCreated>16.9.2021. 14:35:18</DateCreated>
+      <FK_Drivers>2</FK_Drivers>
+      <FK_Vehicles>2</FK_Vehicles>
+      <FK_TravelWarrantStates>2</FK_TravelWarrantStates>
+    </TravelWarrent>
+    <TravelWarrent>
+      <IDTravelWarrent>3</IDTravelWarrent>
+      <RouteDescription>do marsa po kamenja na pluto i mjesec</RouteDescription>
+      <DateCreated>16.9.2021. 14:35:18</DateCreated>
+      <FK_Drivers>3</FK_Drivers>
+      <FK_Vehicles>3</FK_Vehicles>
+      <FK_TravelWarrantStates>3</FK_TravelWarrantStates>
+    </TravelWarrent>
+  </TravelWarrents>
+  <TravelWarrantStates>
+    <TravelWarrantState>
+      <IDTravelWarrantState>1</IDTravelWarrantState>
+      <State>Open</State>
+    </TravelWarrantState>
+    <TravelWarrantState>
+      <IDTravelWarrantState>2</IDTravelWarrantState>
+      <State>Closed</State>
+    </TravelWarrantState>
+    <TravelWarrantState>
+      <IDTravelWarrantState>3</IDTravelWarrantState>
+      <State>Future</State>
+    </TravelWarrantState>
+  </TravelWarrantStates>
+  <Items />
+  <TravelExpences />
+  <VehicleServices>
+    <VehicleService>
+      <IDVehicleService>18</IDVehicleService>
+      <Description>prmojena gefufni</Description>
+      <Date>18.9.2021. 23:48:25</Date>
+      <Price>2000,0000</Price>
+      <FK_Vehicles>1</FK_Vehicles>
+    </VehicleService>
+    <VehicleService>
+      <IDVehicleService>19</IDVehicleService>
+      <Description>mjenjanje kugle </Description>
+      <Date>15.9.2021. 23:48:25</Date>
+      <Price>20014,0000</Price>
+      <FK_Vehicles>1</FK_Vehicles>
+    </VehicleService>
+    <VehicleService>
+      <IDVehicleService>20</IDVehicleService>
+      <Description>promjena ulja </Description>
+      <Date>16.9.2021. 23:48:25</Date>
+      <Price>200,1400</Price>
+      <FK_Vehicles>1</FK_Vehicles>
+    </VehicleService>
+  </VehicleServices>
+</VehicleManagementDB>

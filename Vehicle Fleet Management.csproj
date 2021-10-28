@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA6DA18D-D4AB-4DC9-9580-6FF18913D81A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vehicle_Fleet_Management</RootNamespace>
+    <AssemblyName>Vehicle Fleet Management</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationBlocks.Data.2.0.0\lib\net45\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Factories\RepositoryFactory.cs" />
+    <Compile Include="Forms\DriversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DriversForm.Designer.cs">
+      <DependentUpon>DriversForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RoutesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoutesForm.Designer.cs">
+      <DependentUpon>RoutesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VehicleServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VehicleServices.Designer.cs">
+      <DependentUpon>VehicleServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VehiclesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VehiclesForm.Designer.cs">
+      <DependentUpon>VehiclesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\XmlHelper.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\TravelExpence.cs" />
+    <Compile Include="Models\TravelWarrantState.cs" />
+    <Compile Include="Models\TravelWarrent.cs" />
+    <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\VehicleService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositoryes\DriversRepository.cs" />
+    <Compile Include="Repositoryes\entity\Driver.cs">
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\Item.cs">
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\Route.cs">
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\TravelExpence.cs">
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\TravelWarrantState.cs">
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\TravelWarrent.cs">
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\Vehicle.cs">
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\VehicleService.cs">
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\VFMEntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VFMEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\VFMEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VFMEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\entity\VFMEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VFMEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositoryes\IDriversRepository.cs" />
+    <Compile Include="Repositoryes\IItemsRepository.cs" />
+    <Compile Include="Repositoryes\IRoutesRepository.cs" />
+    <Compile Include="Repositoryes\ItemsRepository.cs" />
+    <Compile Include="Repositoryes\ITravelExpenceRepository.cs" />
+    <Compile Include="Repositoryes\ITravelWarrentsRepository.cs" />
+    <Compile Include="Repositoryes\IVehiclesRepository.cs" />
+    <Compile Include="Repositoryes\RoutesRepository.cs" />
+    <Compile Include="Repositoryes\TravelExpenceRepository.cs" />
+    <Compile Include="Repositoryes\TravelWarrentsRepository.cs" />
+    <Compile Include="Repositoryes\VehiclesRepository.cs" />
+    <EmbeddedResource Include="Forms\DriversForm.resx">
+      <DependentUpon>DriversForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoutesForm.resx">
+      <DependentUpon>RoutesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehicleServices.resx">
+      <DependentUpon>VehicleServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehiclesForm.resx">
+      <DependentUpon>VehiclesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="Repositoryes\entity\VFMEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VFMEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Repositoryes\entity\VFMEntity.edmx.diagram">
+      <DependentUpon>VFMEntity.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Repositoryes\entity\VFMEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VFMEntity.edmx</DependentUpon>
+      <LastGenOutput>VFMEntity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Repositoryes\entity\VFMEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VFMEntity.edmx</DependentUpon>
+      <LastGenOutput>VFMEntity.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlScripts\uspVehicleFleetManagement.sql" />
+    <Content Include="SqlScripts\VehicleManagementDb.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VehicleFleetManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="IDDriver" />
+    </Key>
+    <Property Name="IDDriver" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DriversLicenseNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" />
+    <NavigationProperty Name="TravelWarrents" Relationship="Self.FK__TravelWar__FK_Dr__2F10007B" FromRole="Drivers" ToRole="TravelWarrents" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="IDItem" />
+    </Key>
+    <Property Name="IDItem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Amont" Type="Int32" Nullable="false" />
+    <Property Name="ItemPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="TravelExpences" Relationship="Self.FK__TravelExp__FK_It__398D8EEE" FromRole="Items" ToRole="TravelExpences" />
+  </EntityType>
+  <EntityType Name="Route">
+    <Key>
+      <PropertyRef Name="IDRoute" />
+    </Key>
+    <Property Name="IDRoute" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="StartLocation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EndLocation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Distance" Type="Int32" />
+    <Property Name="FuelSpent" Type="Double" />
+    <Property Name="FK_TravelWarrents" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TravelWarrent" Relationship="Self.FK__Routes__FK_Trave__33D4B598" FromRole="Routes" ToRole="TravelWarrents" />
+  </EntityType>
+  <EntityType Name="TravelExpence">
+    <Key>
+      <PropertyRef Name="IDTravelExpence" />
+    </Key>
+    <Property Name="IDTravelExpence" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchaseDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FK_TravelWarrents" Type="Int32" Nullable="false" />
+    <Property Name="FK_Items" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Item" Relationship="Self.FK__TravelExp__FK_It__398D8EEE" FromRole="TravelExpences" ToRole="Items" />
+    <NavigationProperty Name="TravelWarrent" Relationship="Self.FK__TravelExp__FK_Tr__38996AB5" FromRole="TravelExpences" ToRole="TravelWarrents" />
+  </EntityType>
+  <EntityType Name="TravelWarrantState">
+    <Key>
+      <PropertyRef Name="IDTravelWarrantState" />
+    </Key>
+    <Property Name="IDTravelWarrantState" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="TravelWarrents" Relationship="Self.FK__TravelWar__FK_Tr__30F848ED" FromRole="TravelWarrantStates" ToRole="TravelWarrents" />
+  </EntityType>
+  <EntityType Name="TravelWarrent">
+    <Key>
+      <PropertyRef Name="IDTravelWarrent" />
+    </Key>
+    <Property Name="IDTravelWarrent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RouteDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FK_Drivers" Type="Int32" Nullable="false" />
+    <Property Name="FK_Vehicles" Type="Int32" Nullable="false" />
+    <Property Name="FK_TravelWarrantStates" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Driver" Relationship="Self.FK__TravelWar__FK_Dr__2F10007B" FromRole="TravelWarrents" ToRole="Drivers" />
+    <NavigationProperty Name="Routes" Relationship="Self.FK__Routes__FK_Trave__33D4B598" FromRole="TravelWarrents" ToRole="Routes" />
+    <NavigationProperty Name="TravelExpences" Relationship="Self.FK__TravelExp__FK_Tr__38996AB5" FromRole="TravelWarrents" ToRole="TravelExpences" />
+    <NavigationProperty Name="TravelWarrantState" Relationship="Self.FK__TravelWar__FK_Tr__30F848ED" FromRole="TravelWarrents" ToRole="TravelWarrantStates" />
+    <NavigationProperty Name="Vehicle" Relationship="Self.FK__TravelWar__FK_Ve__300424B4" FromRole="TravelWarrents" ToRole="Vehicles" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="IDVehicle" />
+    </Key>
+    <Property Name="IDVehicle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Kilometers" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TravelWarrents" Relationship="Self.FK__TravelWar__FK_Ve__300424B4" FromRole="Vehicles" ToRole="TravelWarrents" />
+    <NavigationProperty Name="VehicleServices" Relationship="Self.FK__VehicleSe__FK_Ve__2C3393D0" FromRole="Vehicles" ToRole="VehicleServices" />
+  </EntityType>
+  <EntityType Name="VehicleService">
+    <Key>
+      <PropertyRef Name="IDVehicleService" />
+    </Key>
+    <Property Name="IDVehicleService" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="FK_Vehicles" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Vehicle" Relationship="Self.FK__VehicleSe__FK_Ve__2C3393D0" FromRole="VehicleServices" ToRole="Vehicles" />
+  </EntityType>
+  <Association Name="FK__TravelWar__FK_Dr__2F10007B">
+    <End Role="Drivers" Type="Self.Driver" Multiplicity="1" />
+    <End Role="TravelWarrents" Type="Self.TravelWarrent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="IDDriver" />
+      </Principal>
+      <Dependent Role="TravelWarrents">
+        <PropertyRef Name="FK_Drivers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TravelExp__FK_It__398D8EEE">
+    <End Role="Items" Type="Self.Item" Multiplicity="1" />
+    <End Role="TravelExpences" Type="Self.TravelExpence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="IDItem" />
+      </Principal>
+      <Dependent Role="TravelExpences">
+        <PropertyRef Name="FK_Items" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Routes__FK_Trave__33D4B598">
+    <End Role="TravelWarrents" Type="Self.TravelWarrent" Multiplicity="1" />
+    <End Role="Routes" Type="Self.Route" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TravelWarrents">
+        <PropertyRef Name="IDTravelWarrent" />
+      </Principal>
+      <Dependent Role="Routes">
+        <PropertyRef Name="FK_TravelWarrents" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TravelExp__FK_Tr__38996AB5">
+    <End Role="TravelWarrents" Type="Self.TravelWarrent" Multiplicity="1" />
+    <End Role="TravelExpences" Type="Self.TravelExpence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TravelWarrents">
+        <PropertyRef Name="IDTravelWarrent" />
+      </Principal>
+      <Dependent Role="TravelExpences">
+        <PropertyRef Name="FK_TravelWarrents" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TravelWar__FK_Tr__30F848ED">
+    <End Role="TravelWarrantStates" Type="Self.TravelWarrantState" Multiplicity="1" />
+    <End Role="TravelWarrents" Type="Self.TravelWarrent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TravelWarrantStates">
+        <PropertyRef Name="IDTravelWarrantState" />
+      </Principal>
+      <Dependent Role="TravelWarrents">
+        <PropertyRef Name="FK_TravelWarrantStates" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TravelWar__FK_Ve__300424B4">
+    <End Role="Vehicles" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="TravelWarrents" Type="Self.TravelWarrent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicles">
+        <PropertyRef Name="IDVehicle" />
+      </Principal>
+      <Dependent Role="TravelWarrents">
+        <PropertyRef Name="FK_Vehicles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VehicleSe__FK_Ve__2C3393D0">
+    <End Role="Vehicles" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="VehicleServices" Type="Self.VehicleService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicles">
+        <PropertyRef Name="IDVehicle" />
+      </Principal>
+      <Dependent Role="VehicleServices">
+        <PropertyRef Name="FK_Vehicles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VehicleFleetManagementEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Drivers" EntityType="Self.Driver" />
+    <EntitySet Name="Items" EntityType="Self.Item" />
+    <EntitySet Name="Routes" EntityType="Self.Route" />
+    <EntitySet Name="TravelExpences" EntityType="Self.TravelExpence" />
+    <EntitySet Name="TravelWarrantStates" EntityType="Self.TravelWarrantState" />
+    <EntitySet Name="TravelWarrents" EntityType="Self.TravelWarrent" />
+    <EntitySet Name="Vehicles" EntityType="Self.Vehicle" />
+    <EntitySet Name="VehicleServices" EntityType="Self.VehicleService" />
+    <AssociationSet Name="FK__TravelWar__FK_Dr__2F10007B" Association="Self.FK__TravelWar__FK_Dr__2F10007B">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="TravelWarrents" EntitySet="TravelWarrents" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TravelExp__FK_It__398D8EEE" Association="Self.FK__TravelExp__FK_It__398D8EEE">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="TravelExpences" EntitySet="TravelExpences" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Routes__FK_Trave__33D4B598" Association="Self.FK__Routes__FK_Trave__33D4B598">
+      <End Role="TravelWarrents" EntitySet="TravelWarrents" />
+      <End Role="Routes" EntitySet="Routes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TravelExp__FK_Tr__38996AB5" Association="Self.FK__TravelExp__FK_Tr__38996AB5">
+      <End Role="TravelWarrents" EntitySet="TravelWarrents" />
+      <End Role="TravelExpences" EntitySet="TravelExpences" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TravelWar__FK_Tr__30F848ED" Association="Self.FK__TravelWar__FK_Tr__30F848ED">
+      <End Role="TravelWarrantStates" EntitySet="TravelWarrantStates" />
+      <End Role="TravelWarrents" EntitySet="TravelWarrents" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TravelWar__FK_Ve__300424B4" Association="Self.FK__TravelWar__FK_Ve__300424B4">
+      <End Role="Vehicles" EntitySet="Vehicles" />
+      <End Role="TravelWarrents" EntitySet="TravelWarrents" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VehicleSe__FK_Ve__2C3393D0" Association="Self.FK__VehicleSe__FK_Ve__2C3393D0">
+      <End Role="Vehicles" EntitySet="Vehicles" />
+      <End Role="VehicleServices" EntitySet="VehicleServices" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

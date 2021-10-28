@@ -1,0 +1,40 @@
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\bin\Debug\Vehicle Fleet Management.exe.config
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\bin\Debug\Vehicle Fleet Management.exe
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\bin\Debug\Vehicle Fleet Management.pdb
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.csproj.AssemblyReference.cache
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Properties.Resources.resources
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.csproj.GenerateResource.cache
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.csproj.CoreCompileInputs.cache
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.exe
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.pdb
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Main.resources
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Forms.DriversForm.resources
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Forms.VehiclesForm.resources
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.csproj.CopyComplete
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Forms.RoutesForm.resources
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Forms.VehicleServices.resources
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\bin\Debug\EntityFramework.dll
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\bin\Debug\EntityFramework.SqlServer.dll
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\bin\Debug\EntityFramework.xml
+D:\PPPK Poloziti to sa kvalitetnim znanjem i dokumentiranjem u ovom folderu\Vehicle Fleet Management\bin\Debug\EntityFramework.SqlServer.xml
+D:\PPPK\Vehicle Fleet Management\bin\Debug\Vehicle Fleet Management.exe.config
+D:\PPPK\Vehicle Fleet Management\bin\Debug\Vehicle Fleet Management.exe
+D:\PPPK\Vehicle Fleet Management\bin\Debug\Vehicle Fleet Management.pdb
+D:\PPPK\Vehicle Fleet Management\bin\Debug\EntityFramework.dll
+D:\PPPK\Vehicle Fleet Management\bin\Debug\EntityFramework.SqlServer.dll
+D:\PPPK\Vehicle Fleet Management\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+D:\PPPK\Vehicle Fleet Management\bin\Debug\EntityFramework.xml
+D:\PPPK\Vehicle Fleet Management\bin\Debug\EntityFramework.SqlServer.xml
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.csproj.AssemblyReference.cache
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Forms.DriversForm.resources
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Forms.RoutesForm.resources
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Forms.VehicleServices.resources
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Forms.VehiclesForm.resources
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Main.resources
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle_Fleet_Management.Properties.Resources.resources
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.csproj.GenerateResource.cache
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.csproj.CoreCompileInputs.cache
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.csproj.CopyComplete
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.exe
+D:\PPPK\Vehicle Fleet Management\obj\Debug\Vehicle Fleet Management.pdb
